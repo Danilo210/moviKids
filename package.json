@@ -1,0 +1,19 @@
+{
+  "name": "movi-kids",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jogo infantil com duas pessoas, camera do celular e TV conectados por codigo",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.35",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "ws": "^8.18.2"
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html><html lang="pt-BR"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101936">
+  <title>MoviKids • Tela da TV</title><link rel="stylesheet" href="/styles.css">
+</head><body class="tv-page">
+  <div class="tv-shell">
+    <header class="tv-header"><a class="brand" href="/"><span class="brand-icon">✳</span><span>movi<span class="accent">kids</span></span></a><span class="tv-header-right"><span class="status-pill" id="tv-connection">○ Aguardando celular</span><button class="icon-btn" id="sound-btn" title="Ligar/desligar sons">🔊</button><button class="icon-btn" id="fullscreen-btn" title="Tela cheia">⛶</button></span></header>
+    <div class="tv-arena" id="arena">
+      <canvas id="game-canvas" aria-label="Área do jogo"></canvas>
+      <div class="game-hud" id="game-hud">
+        <div class="player-score player-one"><span class="score-face">💗</span><div><span class="score-name">JOGADOR 1</span><strong id="score-0">0</strong></div><span class="player-seen" id="seen-0">○</span></div>
+        <div class="hud-center"><span id="game-label">BOLHAS MÁGICAS</span><strong id="clock">01:00</strong></div>
+        <div class="player-score player-two"><span class="score-face">💙</span><div><span class="score-name">JOGADOR 2</span><strong id="score-1">0</strong></div><span class="player-seen" id="seen-1">○</span></div>
+      </div>
+      <div class="dance-callout" id="dance-callout" hidden><span id="dance-icon">🙌</span><div><small>COPIE O MOVIMENTO!</small><strong id="dance-text">Levante os dois braços!</strong></div><span class="dance-count" id="dance-count">5</span></div>
+      <div class="tv-overlay" id="game-overlay">
+        <div class="overlay-inner">
+          <div class="overlay-welcome" id="overlay-welcome"><span class="welcome-emoji">🎮</span><h1>Prontos para brincar?</h1><p>Conecte a câmera do celular à TV usando o código abaixo.</p></div>
+          <div class="pair-grid" id="pair-grid"><div class="pair-code-box"><small>CÓDIGO DA SUA TV</small><strong class="room-code" id="room-code">······</strong><span id="tv-pair-hint">Digite o código na página do celular</span><div class="pair-status" id="pair-status">⌛ Aguardando conexão...</div></div><div class="qr-panel"><img id="pair-qr" alt="QR Code para conectar o celular"/><small>APONTE A CÂMERA DO CELULAR</small></div></div>
+          <div class="overlay-actions"><button id="overlay-start" class="btn btn-primary btn-big" disabled>▶ Começar a brincar</button><p class="overlay-small" id="overlay-small">Primeiro conecte o celular e ative a câmera.</p></div>
+        </div>
+      </div>
+      <div class="toast" id="tv-toast" aria-live="polite"></div>
+    </div>
+    <div class="tv-toolbar"><div class="tv-toolbar-group"><span class="toolbar-label">JOGO</span><button class="chip active" data-game="bolhas">🫧 Bolhas</button><button class="chip" data-game="estrelas">⭐ Estrelas</button><button class="chip" data-game="danca">🙌 Poses</button></div><div class="tv-toolbar-group"><span class="toolbar-label">CRIANÇAS</span><button class="chip" data-count="1">1</button><button class="chip active" data-count="2">2</button><button class="chip chip-action" id="pause-btn" disabled>⏸ Pausar</button><button class="chip chip-action" id="restart-btn" disabled>↻ Reiniciar</button></div></div>
+    <div class="tv-footer"><span id="tv-instructions">Coloque as crianças lado a lado, com o corpo todo visível na câmera.</span><span>🔒 Nenhuma imagem é transmitida</span></div>
+  </div>
+  <script type="module" src="/js/tv.js"></script>
+</body></html>
